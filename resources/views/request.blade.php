@@ -35,10 +35,11 @@
             @foreach($items as $item)
                 <tr>
                     <th scope="row">{{ $loop->iteration }}</th>
+                    <input type="hidden" name="name[]" value="{{ $item->name }}">
                     <td>{{ $item->name }}</td>
                     <td>{{ $item->total }}</td>
                     <td>{{ $item->remain }}</td>
-                    <td><input name="value" type="number" max="{{ $item->remain }}"></td>
+                    <td><input name="value[]" type="number" max="{{ $item->remain }}"></td>
                 </tr>
             @endforeach
             </tbody>

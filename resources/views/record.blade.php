@@ -20,35 +20,29 @@
 
 <div class="container">
 
-    <h5>Inventory List</h5>
+    <h3>Inventory List</h3>
     <table class="table table-bordered">
         <thead>
         <tr>
             <th>#</th>
             <th>Name</th>
-            <th>Total</th>
-            <th>Remain</th>
             <th>Request</th>
         </tr>
         </thead>
         <tbody>
+        @foreach($rec->inventory_id as $key=>$val)
+            <tr>
+                <td>{{ $loop->iteration }}</td>
+                <td>{{ $key }}</td>
+                <td>{{ $val }}</td>
+            </tr>
+        @endforeach
         <tr>
-            {{--<th scope="row">{{ $loop->iteration }}</th>--}}
-            {{--<td>{{ $item->name }}</td>--}}
-            {{--<td>{{ $item->total }}</td>--}}
-            {{--<td>{{ $item->remain }}</td>--}}
-            {{--<td><input name="value" type="number" max="{{ $item->remain }}"></td>--}}
-            <td>fsdfsd</td>
-            <td>fsdfsd</td>
-            <td>fsdfsd</td>
-            <td>fsdfsd</td>
-            <td>fsdfsd</td>
-        </tr>
         </tbody>
     </table>
 
     <h3>Description</h3>
-    เอาไปไซต์ลูกค้า
+    {{ $rec->description }}
 </div>
 
 <script type="text/javascript">
