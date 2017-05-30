@@ -35,7 +35,9 @@ class RecordController extends Controller
         $record->description = $request->message;
 
         $record->save();
-        $rec_id =  $record->id;
+        $url = url('/record/');
+        $url = str_replace('http://', "", $url);
+        $rec_id =  $url . '/' . $record->id;
         return view('store', compact('rec_id'));
     }
 
