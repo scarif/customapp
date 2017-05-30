@@ -20,7 +20,7 @@
 
 <div class="container">
         <h5>Inventory List</h5>
-    <form method="post" action="addrecord">
+    <form method="post" action="../addrecord">
     <table class="table table-bordered">
             <thead>
             <tr>
